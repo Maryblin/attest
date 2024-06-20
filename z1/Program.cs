@@ -1,16 +1,22 @@
 ﻿// Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N. 
 // Использовать рекурсию, не использовать циклы.
-
-Console.Write("Введите значение M: ");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите значение N: ");
-int n = Convert.ToInt32(Console.ReadLine());
-void number(int m, int n)
+class Program
 {
-    if (m > n) return;
+    static void Main(string[] args)
     {
-        Console.Write($"{m}  ");
+        Console.Write("Введите значение M: ");
+        int m = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите значение N: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        NatNumber(m, n);
     }
-    number(m + 1, n);
+    static void NatNumber(int m, int n)
+    {
+
+        if (m <= n)
+        {
+            Console.Write($"{m}  ");
+            NatNumber(m + 1, n);
+        }
+    }
 }
-number(m, n);
