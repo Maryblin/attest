@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        int[] array = { 10, 3, 8, 25, 5, 0 };
+        int[] array = { 1, 2, 5, 0, 10, 34 };
         ReverseArray(array, array.Length - 1);
     }
     static void ReverseArray(int[] arr, int ind)
